@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,7 @@ use app\Http\Controllers\Admin\DashboardController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin', 'App\Http\Controllers\Admin\DashboardController@index');
-Route::resource('/admin/categories', 'Admin\CategoriesController')
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    Route::get('/', [DashboardController::class, 'index']);
+});
+Route::resource('admin/categories', 'App\Http\Controllers\Admin\CategoriesController');
