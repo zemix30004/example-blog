@@ -16,4 +16,25 @@ class Comment extends Model
     {
         return $this->hasOne(User::class);
     }
+    public function allow()
+    {
+        $this->status = 1;
+        $this->save();
+    }
+    public function denied()
+    {
+        $this->status = 0;
+        $this->save();
+    }
+    public function toggleStatus()
+    {
+        if ($this->status = 0) {
+            return $this->allow();
+        }
+        return $this->denied();
+    }
+    public function remove()
+    {
+        $this->delete();
+    }
 }
