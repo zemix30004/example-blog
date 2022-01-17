@@ -36,10 +36,12 @@ mix.scripts([
     'resources/assets/admin/plugins/datatables/dataTables.bootstrap.min.js',
     'resources/assets/admin/plugins/slimScroll/jquery.slimscroll.min.js',
     'resources/assets/admin/plugins/fastclick/fastclick.js',
+    'resources/assets/admin/plugins/iCheck/icheck.min.js',
     'resources/assets/admin/dist/js/app.min.js',
     'resources/assets/admin/dist/js/demo.js',
     'resources/assets/admin/dist/js/scripts.js',
 ], 'public/js/admin.js');
 mix.copy('resources/assets/admin/bootstrap/fonts', 'public/fonts');
 mix.copy('resources/assets/admin/dist/fonts', 'public/fonts');
+mix.copy('resources/assets/admin/dist/img', 'public/img');
 
