@@ -49,7 +49,7 @@
                     <img src="{{ $user->getImage() }}" alt="" class="img-responsive" width="150">
                     </td>
                     <td><a href="{{ route('users.edit', $user->id) }}" class="fa fa-pencil"></a>
-                        <a href="#" class="fa fa-remove"></a>
+                        {{-- <a href="#" class="fa fa-remove"></a> --}}
                         {{ Form::open(['route'=>['users.destroy', $user->id], 'method'=>'delete'])}}
                         <button onclick="return confirm('are you sure?')" type="submit" class="delete">
                             <i class="fa fa-remove"></i>
@@ -67,6 +67,6 @@
 
     </section>
     <!-- /.content -->
-  </div>
+   </div>
 
 @endsection
