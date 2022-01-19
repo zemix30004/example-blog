@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\TagsController;
@@ -18,9 +19,7 @@ use App\Http\Controllers\Admin\PostsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', [DashboardController::class, 'index']);
 });

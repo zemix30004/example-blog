@@ -28,21 +28,44 @@ mix.styles([
 'resources/assets/admin/dist/css/skins/_all-skins.min.css',
 ], 'public/css/admin.css');
 mix.scripts([
-    'resources/assets/admin/plugins/jQuery/jquery-2.2.3.min.js',
-    'resources/assets/admin/bootstrap/js/bootstrap.min.js',
-    'resources/assets/admin/plugins/select2/select2.full.min.js',
-    'resources/assets/admin/plugins/datepicker/bootstrap-datepicker.js',
-    'resources/assets/admin/plugins/datatables/jquery.dataTables.min.js',
-    'resources/assets/admin/plugins/datatables/dataTables.bootstrap.min.js',
-    'resources/assets/admin/plugins/slimScroll/jquery.slimscroll.min.js',
-    'resources/assets/admin/plugins/fastclick/fastclick.js',
-    'resources/assets/admin/plugins/iCheck/icheck.min.js',
-    'resources/assets/admin/dist/js/app.min.js',
-    'resources/assets/admin/dist/js/demo.js',
-    'resources/assets/admin/dist/js/scripts.js',
+        'resources/assets/admin/plugins/jQuery/jquery-2.2.3.min.js',
+        'resources/assets/admin/bootstrap/js/bootstrap.min.js',
+        'resources/assets/admin/plugins/select2/select2.full.min.js',
+        'resources/assets/admin/plugins/datepicker/bootstrap-datepicker.js',
+        'resources/assets/admin/plugins/datatables/jquery.dataTables.min.js',
+        'resources/assets/admin/plugins/datatables/dataTables.bootstrap.min.js',
+        'resources/assets/admin/plugins/slimScroll/jquery.slimscroll.min.js',
+        'resources/assets/admin/plugins/fastclick/fastclick.js',
+        'resources/assets/admin/plugins/iCheck/icheck.min.js',
+        'resources/assets/admin/dist/js/app.min.js',
+        'resources/assets/admin/dist/js/demo.js',
+        'resources/assets/admin/dist/js/scripts.js',
 ], 'public/js/admin.js');
 mix.copy('resources/assets/admin/bootstrap/fonts', 'public/fonts');
 mix.copy('resources/assets/admin/dist/fonts', 'public/fonts');
 mix.copy('resources/assets/admin/dist/img', 'public/img');
 mix.copy('resources/assets/admin/plugins/iCheck/minimal/blue.png', 'public/css');
+
+mix.styles([
+    'resources/assets/front/css/bootstrap.min.css',
+    'resources/assets/front/css/font-awesome.min.css',
+    'resources/assets/front/css/animate.min.css',
+    'resources/assets/front/css/owl.carousel.css',
+    'resources/assets/front/css//owl.theme.css',
+    'resources/assets/front/css/owl.transitions.css',
+    'resources/assets/front/css/style.css',
+    'resources/assets/front/css/responsive.css',
+],'public/css/front.css');
+
+mix.scripts([
+    'resources/assets/front/js/jquery-1.11.3.min.js',
+    'resources/assets/front/js/bootstrap.min.js',
+    'resources/assets/front/js/owl.carousel.min.js',
+    'resources/assets/front/js/jquery.stickit.min.js',
+    'resources/assets/front/js/menu.js',
+    'resources/assets/front/js/scripts.js',
+], 'public/js/front.js');
+
+mix.copy('resources/assets/front/fonts', 'public/fonts');
+mix.copy('resources/assets/front/images', 'public/images');
 
