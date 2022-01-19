@@ -7,7 +7,7 @@
 
     <!-- favicon icon -->
 
-    <title>Blog</title>
+    <title>Example-blog</title>
 
     <!-- common css -->
     <link rel="stylesheet" href="/css/front.css">
