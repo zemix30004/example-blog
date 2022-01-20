@@ -11,6 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        // dd(\Auth::check());
         $posts = Post::paginate(2);
         $popularPosts = Post::orderBy('views', 'desc')->take(3)->get();
         $featuredPosts = Post::where('is_featured', 1)->take(3)->get();

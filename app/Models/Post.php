@@ -163,6 +163,16 @@ class Post extends Model
             ?   $this->category->title
             :   'Нет категории!';
     }
+    public function getAuthorName()
+    {
+        // if ($this->category != null) {
+        //     return $this->category->title;
+        // }
+        // return 'Нет категории!';
+        return ($this->author != null)
+            ?   $this->author->name
+            :   'Нет автора!';
+    }
 
     public function getTagsTitles()
     {

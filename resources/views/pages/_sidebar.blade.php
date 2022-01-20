@@ -13,7 +13,7 @@
         </aside>
         <aside class="widget">
             <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
-            @foreach ($popularPosts as $post )
+            {{-- @foreach ($popularPosts as $post )
                 <div class="popular-post">
                 <a href="{{ route('post.show', $post->slug) }}" class="popular-img"><img src="{{ $post->getImage() }}" alt="">
                     <div class="p-overlay"></div>
@@ -23,13 +23,13 @@
                     <span class="p-date">{{ $post->getDate() }}</span>
                 </div>
             </div>
-            @endforeach
+            @endforeach --}}
 
         </aside>
         <aside class="widget">
             <h3 class="widget-title text-uppercase text-center">Featured Posts</h3>
             <div id="widget-feature" class="owl-carousel">
-            @foreach ($featuredPosts as $post )
+            {{-- @foreach ($featuredPosts as $post )
                 <div class="item">
                     <div class="feature-content">
                         <img src="{{ $post->getImage() }}" alt="">
@@ -39,12 +39,12 @@
                         </a>
                     </div>
                 </div>
-            @endforeach
+            @endforeach --}}
             </div>
         </aside>
         <aside class="widget pos-padding">
             <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
-            @foreach ($recentPosts as $post)
+            {{-- @foreach ($recentPosts as $post)
                 <div class="thumb-latest-posts">
                 <div class="media">
                     <div class="media-left"
@@ -58,17 +58,17 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach --}}
         </aside>
         <aside class="widget border pos-padding">
             <h3 class="widget-title text-uppercase text-center">Categories</h3>
             <ul>
-                @foreach ($categories as $category )
+                {{-- @foreach ($categories as $category )
                 <li>
                     <a href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a>
                     <span class="post-count pull-right">({{$category->posts()->count()}})</span>
                 </li>
-                @endforeach
+                @endforeach --}}
 
             </ul>
         </aside>
