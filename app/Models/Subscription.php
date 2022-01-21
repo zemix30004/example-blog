@@ -4,17 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Subscription extends Model
 {
     use HasFactory;
-    public function add($email)
+    public static function add($email)
     {
-        $sub = new static;
-        $sub->email = $email;
-        $sub->token = str_random(100);
-        $sub->save();
-        return $sub;
+        $subscription = new Subscription;
+        $subscription->email = $email;
+        $subscription->save();
+        return $subscription;
+    }
+
+    public function generateToken()
+    {
+        $this->token = Str::random(100);
+        $this->save();
     }
     public function remove()
     {
